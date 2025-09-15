@@ -558,7 +558,7 @@ def syswifiprovManageNvmAddr(symbol, event):
     setNvmErrCommLabel = "**NVM Address Info**"
     setNvmErrCommVisible = False
 
-    if (((start_addr % 0x1000) == 0) and (start_addr >= 0x10000000) and (start_addr <= 0x100FF000)):
+    if (((start_addr % 0x1000) == 0) and (start_addr >= 0x10000000) and (start_addr <= 0x101FF000)):
         end_addr = start_addr + 0xFFF
         ld_cmd = '-mreserve=prog@'+hex(start_addr).rstrip('L')+':'+hex(end_addr).rstrip('L')
     else:
